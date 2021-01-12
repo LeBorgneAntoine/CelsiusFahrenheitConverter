@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/background_color"
+    tools:context=".MainActivity">
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input"
+        android:layout_width="309dp"
+        android:layout_height="67dp"
+        android:background="@drawable/rounded_button"
+        android:hint="temperature"
+        android:textAlignment="center"
+        android:textSize="35dp"
+        android:numeric="signed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/roboto_thin"
+        app:layout_constraintVertical_bias="0.331" />
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="223dp"
+        android:layout_height="64dp"
+        android:background="@drawable/rounded_button"
+        android:text="Convert"
+        android:textSize="30dp"
+        android:fontFamily="@font/roboto_thin"
+        android:textColor="@color/text_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:shadowColor="@color/secondary_color"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="20"
+        app:layout_constraintVertical_bias="0.695" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="162dp"
+        android:layout_height="39dp"
+        android:fontFamily="@font/roboto_thin"
+        android:textAlignment="center"
+        android:textSize="26dp"
+        android:background="@drawable/rounded_button"
+        android:text="result"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculate" />
+
+    <RadioGroup
+        android:id="@+id/radiobutton_group"
+        android:layout_width="112dp"
+        android:layout_height="99dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <RadioButton
+            android:id="@+id/radio_CtF"
+            android:layout_width="109dp"
+            android:checked="true"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_thin"
+            android:text="C° -> F°"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteX="151dp"
+            tools:layout_editor_absoluteY="359dp" />
+
+
+        <RadioButton
+            android:id="@+id/radio_FtC"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="F° -> C°"
+            android:fontFamily="@font/roboto_thin"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteX="151dp"
+            tools:layout_editor_absoluteY="407dp" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/input_unit"
+        android:layout_width="52dp"
+        android:layout_height="41dp"
+        android:fontFamily="@font/roboto_thin"
+        android:text="C°"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/input"
+        app:layout_constraintEnd_toEndOf="@+id/input"
+        app:layout_constraintHorizontal_bias="0.968"
+        app:layout_constraintStart_toStartOf="@+id/input"
+        app:layout_constraintTop_toTopOf="@+id/input" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="201dp"
+        android:fontFamily="@font/roboto_black"
+        android:text="Temperature"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input"
+        app:layout_constraintVertical_bias="0.758" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:layout_marginBottom="66dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Converter"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
